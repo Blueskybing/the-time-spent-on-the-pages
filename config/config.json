@@ -1,0 +1,119 @@
+{
+  "mysql": {
+    "test": {
+      "development": {
+        "host": "192.168.1.37",
+        "port": 3306,
+        "database": "test",
+        "user": "root",
+        "password": "123456",
+        "connectionLimit": 10
+      },
+      "test": {
+        "host": "192.168.1.37",
+        "port": 3306,
+        "database": "test",
+        "user": "root",
+        "password": "123456",
+        "connectionLimit": 10
+      },
+      "production": {
+        "host": "192.168.1.37",
+        "port": 3306,
+        "database": "test",
+        "user": "root",
+        "password": "123456",
+        "connectionLimit": 10
+      }
+    }
+  },
+  "log4js": {
+    "development": {
+      "appenders": [
+        {
+          "type": "console"
+        },
+        {
+          "type": "dateFile",
+          "absolute": false,
+          "filename": "logs/log",
+          "maxLogSize": 10240,
+          "backup": 3,
+          "pattern": "-yyyy-MM-dd.log",
+          "alwaysIncludePattern": true,
+          "category": "-"
+        }
+      ],
+      "levels": {
+        "-": "trace"
+      },
+      "replaceConsole": false
+    },
+    "test": {
+      "appenders": [
+        {
+          "type": "console"
+        },
+        {
+          "type": "dateFile",
+          "absolute": false,
+          "filename": "logs/log",
+          "maxLogSize": 1024,
+          "backup": 3,
+          "pattern": "-yyyy-MM-dd.log",
+          "alwaysIncludePattern": true,
+          "category": "-"
+        }
+      ],
+      "levels": {
+        "-": "trace"
+      },
+      "replaceConsole": false
+    },
+    "production": {
+      "appenders": [
+        {
+          "type": "console"
+        },
+        {
+          "type": "dateFile",
+          "absolute": false,
+          "filename": "logs/log",
+          "maxLogSize": 1024,
+          "backup": 3,
+          "pattern": "-yyyy-MM-dd.log",
+          "alwaysIncludePattern": true,
+          "category": "-"
+        }
+      ],
+      "levels": {
+        "-": "trace"
+      },
+      "replaceConsole": false
+    }
+  },
+  "redis": {
+    "development": {
+      "redis_host": "127.0.0.1",
+      "redis_port": 6379,
+      "redis_pass": "123456",
+      "token_expire": 2592000
+    },
+    "test": {
+      "redis_host": "10.251.176.75",
+      "redis_port": 6380,
+      "redis_pass": "yu.wan8",
+      "token_expire": 2592000
+    },
+    "production": {
+      "redis_host": "10.251.176.75",
+      "redis_port": 6379,
+      "redis_pass": "yu.wan8",
+      "token_expire": 2592000
+    }
+  },
+  "local_cache": {
+    "max": 100000,
+    "maxAge": 3600000
+  }
+}
