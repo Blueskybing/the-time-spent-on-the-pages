@@ -5,6 +5,8 @@
  */
 
 require('../libs');
+require('../cache/cache_counter');
+require('../statistics/synchronizer');
 var app = require('../app');
 var debug = require('debug')('the-time-spent-on-the-pages:server');
 var http = require('http');
